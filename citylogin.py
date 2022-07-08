@@ -2,9 +2,9 @@ from flask import Flask
 from flask import Flask, flash, redirect, render_template, request, session, abort
 import os
 
-app = Flask(__name__)
+citylogin = Flask(__name__)
 
-@app.route('/login', methods=['GET', 'POST'])
+@citylogin.route('/login', methods=['GET', 'POST'])
 def login():
     error = None
     if request.method == 'POST':
