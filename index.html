@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={{ url_for('static', filename='styles.css')}}>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+    <title>IOT - CITY</title>
+</head>
+<body>
+    <header>
+        <div id="title">
+            <div id="title-text">
+                <img src="{{url_for('static', filename='logo.png')}}" id="logo-image"/>
+            </div>
+        </div>
+    </header>
+    <main> 
+        <section id="three-sections">
+            <div id="left-section">
+                <div id="old-board-text">
+                    <p id="old-board-static-text">On Billboard Now...</p>
+                    <p id="input-text2">{{ variable }}</p>
+                </div>
+                <div id="board-text-content">
+                    <form action="#" method="post">
+                        <p id="input-text">Enter Billboard Text:</p>
+                        <p><input id ="textbox" type="text" name="nm" /></p>
+                        <p><input id ="billboard-submit" type="submit" value="submit" onclick="oldBillboardText()"/></p>
+                    </form>
+                </div> 
+            </div>
+    
+            <div id="middle-section">
+                <div id="mid-content">
+                    <div id="live-stream">
+                        <iframe src="http://10.4.2.41:5000" height="550px" width="800px" id="screen"></iframe>
+                    </div>
+                    <div id="map">
+                        map
+                    </div>
+                </div>
+            </div>
+        
+            <div id="right-section">
+                <div id="right-content">
+                    <div id="lights-content">
+                        <div id="light-meter"></div>
+                        <div id="button-label">
+                            Light Switch
+                        </div>
+                        <div id="buttons">
+                            <div id="light-button">
+                                <label class="switch">
+                                    <input type="checkbox" id="light-switch" onclick="lightMeter()">
+                                    <span class="slider round"></span>
+                                  </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="water-content">
+                        <div id="water-meter">
+                            <div id="inner-water-meter2"></div>
+                            <div id="inner-water-meter"></div>
+                        </div>
+                        <div id="button-label">
+                            Water Toggle
+                        </div>
+                        <div id="buttons">
+                            <div id="water-button">
+                                <label class="switch">
+                                    <input type="checkbox" id="water-switch" onclick="waterMeter()">
+                                    <span class="slider round"></span>
+                                  </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
